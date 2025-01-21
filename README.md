@@ -4,15 +4,12 @@ this is a repo where I will produce content as frequently as possible by writing
 ## Table of contents
 
 - [Technologies to review](#technologies-to-review-toc)
-- [Work in progress](#work-in-progress-^toc)
+- [Work in progress](#work-in-progress-toc)
 
 
 ## Work in progress [^toc](#table-of-contents)
-
-- 
+- Cognito
 
 ## Technologies to review [^toc](#table-of-contents)
-
-- Cognito
-- Redis
 - OAuth v2
+- Redis
