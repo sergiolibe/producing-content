@@ -3,12 +3,15 @@ this is a repo where I will produce content as frequently as possible by writing
 
 ## Table of contents
 
-- [Technologies to review](#technologies-to-review-toc)
+- [Technologies reviewed](#technologies-reviewed-toc)
 - [Work in progress](#work-in-progress-toc)
+- [Technologies to review](#technologies-to-review-toc)
 
+## Technologies Reviewed [^toc](#table-of-contents)
+- [Secrets Manager (AWS)](./reviewed/secrets-manager-aws.md)
 
 ## Work in progress [^toc](#table-of-contents)
-- Cognito
+- [Cognito](./wip/cognito-aws.md)
 
 ## Technologies to review [^toc](#table-of-contents)
 - OAuth v2
