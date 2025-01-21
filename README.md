@@ -11,8 +11,9 @@ this is a repo where I will produce content as frequently as possible by writing
 - [Secrets Manager (AWS)](./reviewed/secrets-manager-aws.md)
 
 ## Work in progress [^toc](#table-of-contents)
-- [Cognito](./wip/cognito-aws.md)
+- [Cognito (AWS)](./wip/cognito-aws.md)
 
 ## Technologies to review [^toc](#table-of-contents)
+- SigV4 (AWS Signature Version 4)
 - OAuth v2
 - Redis
