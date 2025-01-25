@@ -81,7 +81,7 @@ The automatic rotation of secrets stored in this service can be done through a l
 
 For simplicity, the current Version before the rotation is going to be referred as `A`, and the new Version introduced by the rotation is going to be referred as `B`. The 4 events that the lambda will be:
 1. `createSecret`: this step will do a bootstrap of the new Version (`B`), in order for the Version to exist in the next step(s), it should be labelled with the Version Stage label `AWSPENDING`
-2. `setSecret`: this step might be optional if the content was properly set on creation of the new secret, on the `createSecret` step. Here you might put some custom creation logic that may, or may not, communicate with other services to decide what to save in the secret content
+2. `setSecret`: this step might be optional. Assuming the secret content was properly set on creation, on the `createSecret` step. Here you might store or use the new credentials/secret in other service. For example if the secret stores DB credentials, you might want to update those DB credentials in this step (remember to fallback to the old credentials in case of failure of any of the following steps).
 3. `testSecret`: this step is optional depending on the nature of the secret. Here you might test the secret agains a service, to check if the new credentials actually work.
 4. `finishSecret`: this step will finish the rotation process by doing any updates to the new secret Version (`B`), if needed, but it will mainly perform two operations:
    1. Move the stage label `AWSCURRENT` from the current Version (`A`) to the new Version (`B`): after this operation, Version `A` will automatically get the stage label `AWSPREVIOUS`, and Version `B` will have two stage labels: `AWSPENDING` and `AWSCURRENT`
