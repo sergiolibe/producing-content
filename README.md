@@ -12,8 +12,10 @@ this is a repo where I will produce content as frequently as possible by writing
 
 ## Work in progress [^toc](#table-of-contents)
 - [Cognito (AWS)](./wip/cognito-aws.md)
+- [Glue (AWS)](./wip/glue-aws.md)
 
 ## Technologies to review [^toc](#table-of-contents)
 - SigV4 (AWS Signature Version 4)
 - OAuth v2
+- ETLs (maybe do a POC of it with go )
 - Redis
