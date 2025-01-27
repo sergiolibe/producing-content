@@ -10,7 +10,9 @@ $dates = explode(' ', trim($dates_output));
 $memo = [];
 foreach ($dates as $d) $memo[$d] = true;
 
-$header = '_______________│ M│Tu│ W│Th│ F│Sa│Su│';
+$header =
+  '     [2025]     ____________________' . PHP_EOL .
+  '_______________│ M│Tu│ W│Th│ F│Sa│Su│';
 
 function print_red($x) { return "\e[31m$x\e[0m";}
 function print_green($x) { return "\e[32m$x\e[0m";}
@@ -22,6 +24,9 @@ $interval = DateInterval::createFromDateString('1 week');
 $period = new DatePeriod($start, $interval, $end);
 
 $s = $header . PHP_EOL;
+$is_future = false;
+$n_weeks_future = 0;
+$show_n_empty_weeks = 3;
 foreach ($period as $dt) {
   $d = clone $dt;
   $s .= $dt->format("M-d") . ' - ' . $dt->add(new DateInterval('P6D'))->format("M-d") . '│';
@@ -29,6 +34,7 @@ foreach ($period as $dt) {
   for ($i=0;$i<7;$i++) {
     $stamp = $d->format("d-m");
     if ($d>$today) {
+      $is_future = true;
       $s .= "░░";
     } elseif ($memo[$stamp]??false) {
       $s .= print_green(' ✔');
@@ -39,6 +45,8 @@ foreach ($period as $dt) {
     $d->add(new DateInterval('P1D'));
   }
   $s .= PHP_EOL;
+  if ($is_future) $n_weeks_future++;
+  if ($n_weeks_future >= $show_n_empty_weeks) break;
 }
 
 file_put_contents(__DIR__.'/progress-days.txt', $s);
