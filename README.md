@@ -13,6 +13,8 @@ this is a repo where I will produce content as frequently as possible by writing
 ## Work in progress [^toc](#table-of-contents)
 - [Cognito (AWS)](./wip/cognito-aws.md)
 - [Glue (AWS)](./wip/glue-aws.md)
+- ECS AWS
+- Fargate AWS
 
 ## Technologies to review [^toc](#table-of-contents)
 - SigV4 (AWS Signature Version 4)
