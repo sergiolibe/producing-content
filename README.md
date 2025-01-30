@@ -13,6 +13,7 @@ this is a repo where I will produce content as frequently as possible by writing
 ## Work in progress [^toc](#table-of-contents)
 - [Cognito (AWS)](./wip/cognito-aws.md)
 - [Glue (AWS)](./wip/glue-aws.md)
+- [EventBridge (AWS)](./wip/eventbridge-aws.md)
 - ECS AWS
 - Fargate AWS
 
