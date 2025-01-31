@@ -14,7 +14,7 @@ this is a repo where I will produce content as frequently as possible by writing
 - [Cognito (AWS)](./wip/cognito-aws.md)
 - [Glue (AWS)](./wip/glue-aws.md)
 - [EventBridge (AWS)](./wip/eventbridge-aws.md)
-- ECS AWS
+- [ECS AWS](./wip/ecs-aws.md)
 - Fargate AWS
 
 ## Technologies to review [^toc](#table-of-contents)
